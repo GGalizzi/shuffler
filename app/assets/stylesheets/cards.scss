@@ -31,7 +31,6 @@ h2 {
 
 .card-header {
     line-height: 0;
-    margin-bottom: .3em;
     border-bottom: 1px solid #232323;
 
     text-align: center;
@@ -39,4 +38,10 @@ h2 {
 
 .card-body {
     margin: 1.25em;
+}
+
+.card-image {
+    margin: 0;
+    text-align: center;
+    margin: 0 auto;
 }

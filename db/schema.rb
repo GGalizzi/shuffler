@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150703224522) do
+ActiveRecord::Schema.define(version: 20150704004900) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "title"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20150703224522) do
   end
 
   add_index "cards", ["content_type", "content_id"], name: "index_cards_on_content_type_and_content_id"
+
+  create_table "images", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "content_file_name"
+    t.string   "content_content_type"
+    t.integer  "content_file_size"
+    t.datetime "content_updated_at"
+  end
 
   create_table "links", force: :cascade do |t|
     t.string   "content"

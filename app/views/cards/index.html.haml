@@ -5,5 +5,5 @@
       .card-header
         %h3
           %a{href: card_path(card)}= card.title
-      .card-body
+      %div{class: "card-body card-#{card.content_type.downcase}"}
         = render card.content
