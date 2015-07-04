@@ -1,4 +1,12 @@
 %header
-  %h1.logo Shuffler
+  %h1.logo
+    %a{href: root_path} Shuffler
   %nav
-    one | two | three
+    - unless logged?
+      = link_to "Signup", signup_path
+      |
+      = link_to "Signin", login_path
+      |
+      three
+    - else
+      = current_user.email

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704133604) do
+ActiveRecord::Schema.define(version: 20150704150259) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "title"
@@ -61,5 +61,15 @@ ActiveRecord::Schema.define(version: 20150704133604) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email"
 
 end
