@@ -1,0 +1,10 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: Cool article
+  content: one (Link)
+
+two:
+  title: How to dance
+  content: one (Post)

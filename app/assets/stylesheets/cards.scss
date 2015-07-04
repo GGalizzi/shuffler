@@ -1,0 +1,42 @@
+// Place all the styles related to the cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+    text-align: center
+}
+
+.cards {
+    margin: 1.5em;
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 30vw;
+    align-items: center;
+    align-content: center;
+}
+
+.card-container {
+    margin: .5em;
+
+    border: 1px solid #232323;
+    border-radius: .2em;
+
+    flex-grow: 1;
+
+    width: 15vw;
+    max-height: 387px;
+
+    overflow: hidden;
+}
+
+.card-header {
+    line-height: 0;
+    margin-bottom: .3em;
+    border-bottom: 1px solid #232323;
+
+    text-align: center;
+}
+
+.card-body {
+    margin: 1.25em;
+}
