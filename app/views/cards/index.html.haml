@@ -1,9 +1,3 @@
-%h2 Your dealt cards
+%h2 Your hand
 .cards
-  - @cards.each do |card|
-    .card-container
-      .card-header
-        %h3
-          %a{href: card_path(card)}= card.title
-      %div{class: "card-body card-#{card.content_type.downcase}"}
-        = render card.content
+  = render @cards

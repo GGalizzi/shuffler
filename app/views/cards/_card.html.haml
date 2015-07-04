@@ -1,0 +1,8 @@
+.card-container
+  .card-header
+    %h3
+      %a{href: card_path(card)}= card.title
+  %div{class: "card-body card-#{card.content_type.downcase}"}
+    = render card.content
+  .card-footer
+    = render card.tags
