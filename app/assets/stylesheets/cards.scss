@@ -46,6 +46,10 @@ h2 {
     margin: 0 auto;
 }
 
+.card-footer {
+    margin: .5em;
+}
+
 .tag {
     margin: 0.1em 0 .5em .5em;
     padding: .4em;
@@ -56,4 +60,8 @@ h2 {
     display: inline-block;
 
     font-size: .74em;
+}
+
+.by {
+    text-align: right;
 }
