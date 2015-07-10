@@ -6,4 +6,4 @@
     = render card.content
   .card-footer
     = render card.tags
-    .by by Someone
+    %a.by{href: user_path(card.user)}= "by #{card.user.name}"

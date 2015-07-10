@@ -5,7 +5,13 @@ class UserTest < ActiveSupport::TestCase
     @user ||= User.new
   end
 
+  def test_invalid
+    assert user.invalid?
+  end
+
   def test_valid
-    assert user.valid?
+    @user = users(:one)
+    @user.password = "1234"
+    assert @user.valid?
   end
 end

@@ -5,6 +5,5 @@ class IndexListTest < Capybara::Rails::TestCase
     visit root_path
     assert_content page, "hand"
     page.must_have_css(".cards")
-
   end
 end

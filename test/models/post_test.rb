@@ -11,6 +11,6 @@ class PostTest < ActiveSupport::TestCase
 
   def test_snippet
     post = Post.new(content: "word " * 250)
-    assert_operator post.snippet.split.length, :<, 45O
+    assert_operator post.snippet.split.length, :<, 44
   end
 end

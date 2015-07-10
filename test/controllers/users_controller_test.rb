@@ -7,13 +7,10 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   def test_create
-    get :create
-    assert_response :success
-  end
+    assert_difference('User.count') do
+      post :create, user: { name: "Sherlock", email: "sher@email.com", password: "1234" }
+    end
 
-  def test_show
-    get :show
-    assert_response :success
+    assert_redirected_to root_path
   end
-
 end

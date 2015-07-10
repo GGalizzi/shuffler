@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def logged?
-    !current_user.valid?
+    current_user
   end
 end

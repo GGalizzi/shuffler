@@ -7,13 +7,19 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   def test_create
-    get :create
-    assert_response :success
+    login_user
+    assert_equal users(:one).id, session["user_id"]
   end
 
   def test_destroy
+    login_user
     get :destroy
-    assert_response :success
+    assert_nil session["user_id"]
   end
 
+  private
+
+  def login_user
+    post :create, session: { email: "roro@email.com", password: "1234" }
+  end
 end
