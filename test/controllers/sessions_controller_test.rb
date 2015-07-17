@@ -8,7 +8,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   def test_create
     login_user
-    assert_equal users(:one).id, session["user_id"]
+    assert_equal users(:roro).id, session["user_id"]
   end
 
   def test_destroy

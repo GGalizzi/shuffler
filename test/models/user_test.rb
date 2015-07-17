@@ -10,7 +10,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def test_valid
-    @user = users(:one)
+    @user = users(:roro)
     @user.password = "1234"
     assert @user.valid?
   end
