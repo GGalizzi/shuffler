@@ -8,4 +8,4 @@
     = render card.tags
     %a.by{href: user_path(card.user)}= "by #{card.user.name}"
     - if card.deck.present?
-      = link_to card.deck.name, card.deck
+      = link_to "On deck: #{card.deck.name}", card.deck
