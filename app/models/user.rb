@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :boards
+  has_many :decks
   has_many :cards
   
   has_secure_password
@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   validates :password, presence: true
 
   def loose_cards
-    cards.select{|c| c.board.nil?}
+    cards.select{|c| c.deck.nil?}
   end
 end

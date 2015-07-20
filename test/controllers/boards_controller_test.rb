@@ -1,6 +1,6 @@
 require "test_helper"
 
-class BoardsControllerTest < ActionController::TestCase
+class DecksControllerTest < ActionController::TestCase
   def test_sanity
     flunk "Need real tests"
   end

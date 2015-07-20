@@ -7,5 +7,5 @@
   .card-footer
     = render card.tags
     %a.by{href: user_path(card.user)}= "by #{card.user.name}"
-    - if card.board.present?
-      = link_to card.board.name, card.board
+    - if card.deck.present?
+      = link_to card.deck.name, card.deck
