@@ -1,0 +1,6 @@
+%h2
+  = "Board #{@board.name} - "
+  = link_to "by #{@board.user.name}", @board.user
+
+.cards
+  = render @board.cards
