@@ -1,3 +1,3 @@
 = simple_form_for(current_user.active_relationships.find_by(followed_id: @user.id),
-                  method: :delete) do |f|
+                  method: :delete, remote: true, authenticity_token: true) do |f|
   = f.submit "Unfollow"
