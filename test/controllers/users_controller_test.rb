@@ -13,4 +13,10 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to root_path
   end
+
+  def test_follow
+    roro = users(:roro)
+    assert roro.following? users(:two)
+    refute roro.following? users(:lonely)
+  end
 end

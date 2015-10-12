@@ -1,3 +1,8 @@
+- unless current_user?(@user)
+  - if current_user.following?(@user)
+    = render 'unfollow'
+  - else
+    = render 'follow'
 %h2= @user.name
 - @user.decks.each do |deck|
   %h3= deck.name

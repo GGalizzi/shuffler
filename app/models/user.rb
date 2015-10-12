@@ -24,4 +24,8 @@ class User < ActiveRecord::Base
   def unfollow(user)
     following.destroy user
   end
+
+  def following?(user)
+    following.include? user
+  end
 end
