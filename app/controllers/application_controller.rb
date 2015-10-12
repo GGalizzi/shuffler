@@ -16,4 +16,10 @@ class ApplicationController < ActionController::Base
   def logged?
     current_user
   end
+
+  def logged_check
+    unless logged?
+      redirect_to login_path
+    end
+  end
 end
