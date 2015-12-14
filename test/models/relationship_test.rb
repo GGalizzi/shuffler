@@ -23,4 +23,9 @@ class RelationshipTest < ActiveSupport::TestCase
     roro.unfollow martin
     refute roro.following.include? martin
   end
+
+  def can_get_following_cards
+    roro = users(:roro)
+    assert roro.following.respond_to? :cards
+  end
 end

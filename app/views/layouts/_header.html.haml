@@ -11,3 +11,12 @@
     - else
       = current_user.email
       = link_to "Log out", logout_path
+
+%div.top_links
+  .sections
+    = link_to "Feed", feed_path
+    |
+    = link_to "All", root_path
+  .sorts
+    New | Top
+ 

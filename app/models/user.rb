@@ -28,4 +28,8 @@ class User < ActiveRecord::Base
   def following?(user)
     following.include? user
   end
+
+  def feed
+    Card.where("user_id IN (?)", following_ids)
+  end
 end

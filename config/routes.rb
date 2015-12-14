@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
 
+  get 'feed' => 'cards#feed'
+
   resources :decks
   resources :relationships, only: [:create, :destroy]
   resources :tags, only: [:show]
