@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'tags/show'
 
   root 'cards#index'
+  
   resources :cards
 
   get 'signup'  => 'users#new'

@@ -1,6 +1,6 @@
 %header
   %h1.logo
-    %a{href: root_path} Shuffler
+    %a{href: logged? ? feed_path : root_path} Shuffler
   %nav
     - unless logged?
       = link_to "Register", signup_path

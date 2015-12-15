@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password]) == @user
       session[:user_id] = @user.id
       flash[:success] = "Logged in as #{@user.name}"
-      redirect_to '/'
+      redirect_to '/feed'
     else
       flash[:notice] = "Check for errors"
       render 'new'
